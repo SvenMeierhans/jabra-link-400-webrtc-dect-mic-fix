@@ -22,7 +22,12 @@
       "w3c-web-hid",
       "dom-mediacapture-transform",
       "dom-webcodecs"
-    ]
+    ],
+    "paths": {
+      "jabra-link-400-webrtc-dect-mic-fix": [
+        "./src/index.ts"
+      ]
+    }
   },
   "include": [
     "src",

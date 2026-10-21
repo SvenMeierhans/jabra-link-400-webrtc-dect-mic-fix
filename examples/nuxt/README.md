@@ -17,4 +17,5 @@ Notes
 - Everything that touches the browser is imported dynamically inside functions, and the component is `.client.vue`, so SSR never executes it.
 - Trigger `join()` from client code (`onMounted`, a click handler), not from `useAsyncData`/server code.
 - On route changes inside the SPA, call `leave()` in `onBeforeUnmount`, otherwise the track stays open.
-- These examples are untested against a real Daily room; see the main README for what was verified.
+- Verified: the files type-check (`nuxt typecheck`) and build for production in a fresh Nuxt 3.21 app, and the server renders the page without errors. The timing rules of `useMicStatus` are covered by unit tests (`test/useMicStatus.test.ts`).
+- Not verified: a real Daily room and a real dongle in a Nuxt app; see the main README for what was tested on hardware.

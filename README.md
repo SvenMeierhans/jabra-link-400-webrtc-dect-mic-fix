@@ -207,7 +207,7 @@ Notes: it works for Daily Prebuilt too, because off-hook acts on the dongle and 
 | Dongle | Jabra Link 400 (USB `0B0E:1131`), firmware 1.13 and 1.16 (inferred from the USB revision) | Other Jabra/GN dongles, other vendors' DECT dongles |
 | OS | Windows 11 (build 26200) | macOS, Linux |
 | Browser | Edge 155, Chrome 155 | Firefox / Safari (no WebHID; silence detection falls back to an AudioContext analyser, untested) |
-| App | Plain `getUserMedia` pages; cross-origin-iframe simulation of Prebuilt | An actual Daily call |
+| App | Plain `getUserMedia` pages; cross-origin-iframe simulation of Prebuilt; the Nuxt examples type-check and build with SSR in Nuxt 3.21 (the server renders the page without errors) | An actual Daily call |
 
 Firmware 1.16 (the latest at the time of writing) does not fix the problem. Please open a [device report](https://github.com/SvenMeierhans/jabra-link-400-webrtc-dect-mic-fix/issues/new?template=device-report.yml) for anything else, successful or not.
 

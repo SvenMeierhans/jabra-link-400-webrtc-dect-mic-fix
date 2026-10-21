@@ -52,6 +52,8 @@ export default defineConfig({
   },
   test: {
     environment: 'node',
+    // examples import the package by name, as an app would
+    alias: { 'jabra-link-400-webrtc-dect-mic-fix': path.join(root, 'src/index.ts') },
     include: ['test/**/*.test.ts'],
   },
 });
