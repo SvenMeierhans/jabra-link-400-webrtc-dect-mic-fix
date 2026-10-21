@@ -1,0 +1,56 @@
+name: Device report
+description: Tell us whether the fix works (or not) on your dongle / headset / OS.
+title: "[device] <dongle> + <headset> on <OS>"
+labels: ["device-report"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for testing! The library has only been verified on a Jabra Link 400. Every report widens the compatibility table.
+        Please run `lab/reload-test.html` first (see lab/README.md) so we can compare numbers.
+  - type: input
+    id: dongle
+    attributes:
+      label: Dongle / adapter
+      description: Model and USB ID (vendorId:productId), firmware version if you know it
+      placeholder: "Jabra Link 400, 0B0E:1131, firmware 1.16"
+    validations:
+      required: true
+  - type: input
+    id: headset
+    attributes:
+      label: Headset
+      placeholder: "Jabra Engage 55"
+  - type: input
+    id: os-browser
+    attributes:
+      label: OS and browser
+      placeholder: "Windows 11 24H2, Edge 155"
+    validations:
+      required: true
+  - type: dropdown
+    id: reproduced
+    attributes:
+      label: Did you reproduce the silent track WITHOUT the library?
+      options:
+        - "Yes, every time the mic was re-opened 1-5 s after the last close"
+        - "Yes, sometimes"
+        - "No"
+    validations:
+      required: true
+  - type: dropdown
+    id: fixed
+    attributes:
+      label: Does the library fix it?
+      options:
+        - "Yes, with the WebHID off-hook"
+        - "Yes, only via the release-and-wait fallback"
+        - "No"
+        - "Not tested yet"
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Output of lab/reload-test.html (summary) and, if you can, the HID monitor
+      render: text

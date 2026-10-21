@@ -1,0 +1,68 @@
+{
+  "name": "jabra-link-400-webrtc-dect-mic-fix",
+  "version": "0.1.0",
+  "description": "Fixes the \"live but silent\" microphone track that DECT headset dongles (verified: Jabra Link 400) deliver after a page refresh in WebRTC apps such as Daily.co.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "lab": "vite",
+    "build": "vite build && tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "lab:summarize": "tsx lab/summarize.ts",
+    "lab:timeline": "tsx lab/hid/merge-timeline.ts",
+    "prepare": "npm run build",
+    "build:userscript": "vite build -c vite.userscript.config.ts"
+  },
+  "keywords": [
+    "webrtc",
+    "getusermedia",
+    "webhid",
+    "dect",
+    "jabra",
+    "headset",
+    "microphone",
+    "daily",
+    "daily-co",
+    "silent-audio",
+    "typescript"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@types/dom-mediacapture-transform": "^0.1.10",
+    "@types/dom-webcodecs": "^0.1.13",
+    "@types/node": "^18.19.0",
+    "@types/w3c-web-hid": "^1.0.6",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0",
+    "vite": "^5.4.0",
+    "vitest": "^2.1.0"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SvenMeierhans/jabra-link-400-webrtc-dect-mic-fix.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SvenMeierhans/jabra-link-400-webrtc-dect-mic-fix/issues"
+  },
+  "homepage": "https://github.com/SvenMeierhans/jabra-link-400-webrtc-dect-mic-fix#readme"
+}

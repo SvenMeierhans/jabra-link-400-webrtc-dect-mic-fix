@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Prebuilt simulation (host page)</title>
+<style>
+  body { font: 15px/1.5 system-ui, sans-serif; margin: 24px; max-width: 900px; }
+  button { font-size: 18px; padding: 12px 22px; border-radius: 10px; border: 2px solid #2a7; background: #e9f9f0; cursor: pointer; }
+  #ask { background: #fff3cd; border: 1px solid #e0c36a; padding: 16px; border-radius: 8px; }
+  pre { background: #f6f6f6; padding: 12px; border-radius: 8px; white-space: pre-wrap; font-size: 12px; max-height: 50vh; overflow: auto; }
+  iframe { width: 1px; height: 1px; border: 0; }
+</style>
+</head>
+<body>
+<h1>Daily Prebuilt simulation</h1>
+<p>The host page prepares the dongle, then embeds a <b>cross-origin iframe</b> that opens the mic after a delay - just like a
+third-party UI such as Daily Prebuilt, to which the host page has no access.</p>
+<div id="ask" hidden>
+  <p><b>One-time permission:</b> click, choose the dongle in the browser's device dialog and press Connect.</p>
+  <button id="btn">Grant headset access</button>
+</div>
+<p id="status">...</p>
+<pre id="out"></pre>
+<script type="module" src="./prebuilt-sim.ts"></script>
+</body>
+</html>

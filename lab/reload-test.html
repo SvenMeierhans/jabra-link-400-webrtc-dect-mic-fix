@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Reload test - silent mic after refresh</title>
+<style>
+  body { font: 14px/1.4 system-ui, sans-serif; margin: 24px; max-width: 920px; }
+  #banner { background: #fff3cd; border: 1px solid #e0c36a; padding: 12px 16px; border-radius: 8px; font-size: 16px; }
+  pre { background: #f6f6f6; padding: 12px; border-radius: 8px; white-space: pre-wrap; font-size: 12px; max-height: 60vh; overflow: auto; }
+</style>
+</head>
+<body>
+<h1>Reload test</h1>
+<div id="banner">Keep the headset on and this window in the foreground. The page reloads itself over and over until it says DONE.
+No need to speak: a working mic always has a noise floor, a dead one delivers exact zeros.</div>
+<p id="status">...</p>
+<pre id="out"></pre>
+<script type="module" src="./reload-test.ts"></script>
+</body>
+</html>

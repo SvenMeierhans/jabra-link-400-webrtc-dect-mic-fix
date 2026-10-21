@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Demo - jabra-link-400-webrtc-dect-mic-fix</title>
+<style>
+  body { font: 15px/1.5 system-ui, sans-serif; margin: 24px; max-width: 860px; }
+  button { font-size: 16px; padding: 10px 18px; margin: 0 8px 8px 0; border-radius: 8px; border: 1px solid #888; background: #f4f4f4; cursor: pointer; }
+  pre { background: #f6f6f6; padding: 12px; border-radius: 8px; white-space: pre-wrap; font-size: 12px; }
+  #result { font-size: 18px; margin: 12px 0; }
+  #hint { display: none; background: #e8f1ff; border: 1px solid #9bbcf0; padding: 10px 14px; border-radius: 8px; margin: 12px 0; }
+</style>
+</head>
+<body>
+<h1>Demo</h1>
+<p>Open the mic with <code>acquireWorkingMic()</code>, then press <b>Reload</b> (or F5) and watch how fast it comes back.
+Add <code>?loop=6</code> to the URL to let the page reload itself six times with different "app boot" delays.</p>
+
+<button id="grant">1. Grant headset access (once)</button>
+<button id="start">2. Start mic</button>
+<button id="stop">Stop mic</button>
+<button id="reload">Reload</button>
+<div id="hint"></div>
+<div id="result">...</div>
+<pre id="out"></pre>
+<script type="module" src="./main.ts"></script>
+</body>
+</html>

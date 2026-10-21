@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Userscript harness</title>
+<!-- Loaded first and as a classic script, like Tampermonkey does at document-start. Build it with `npm run build:userscript`. -->
+<script src="/userscript/dect-mic-fix.user.js"></script>
+<style>
+  body { font: 14px/1.4 system-ui, sans-serif; margin: 24px; max-width: 900px; }
+  pre { background: #f6f6f6; padding: 12px; border-radius: 8px; white-space: pre-wrap; font-size: 12px; max-height: 45vh; overflow: auto; }
+  iframe { width: 1px; height: 1px; border: 0; }
+</style>
+</head>
+<body>
+<h1>Userscript harness</h1>
+<p>A page that opens the mic like any website would (plain <code>getUserMedia</code>), with the userscript injected first.
+<code>?mode=direct</code> opens it in this page, <code>?mode=frame</code> in a cross-origin iframe (like Daily Prebuilt).</p>
+<p id="status">...</p>
+<pre id="out"></pre>
+<script type="module" src="./userscript-harness.ts"></script>
+</body>
+</html>
